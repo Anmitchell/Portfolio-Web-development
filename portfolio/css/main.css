@@ -1,0 +1,97 @@
+/***** BASE STYLES *****/
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #2b2b2b;
+  background-color: #ebebeb;
+}
+
+#enlarge-font {
+  font-size: 50px;
+}
+
+.increase-font {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+#html-css, #c-plus-plus {
+    height: 600px;
+}
+
+#push-box {
+  padding-left: 540px
+}
+
+/***** GRID *****/
+.full-width {
+    width: 1200px;
+    margin: 0 auto;
+    clear: both;
+}
+
+.half-width {
+  width: 600px;
+  float: left;
+}
+
+.third-width {
+  width: 400px;
+  float: left;
+}
+.center-html-css-icon {
+  width: 100px;
+  float: left;
+}
+
+#center-c-icon {
+  padding-left: 600px;
+  height: 150px;
+}
+
+#height-adjust {
+  height: 150px;
+  padding-left: 550px;
+}
+
+/***** Header *****/
+header {
+    height: 100px:
+    background-size: cover;
+    clear: both;
+}
+
+header h1 {
+  font-family: 'Lora', serif;
+  font-size: 30px;
+  color: #bbc085;
+  padding: 65px 0 65px 25px;
+}
+
+nav {
+    float: right;
+    padding: 75px 25px;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    color: #828282;
+    padding-left: 30px;
+}
+
+/* Download links and web-templates font */
+.font-change {
+  font-size: 20px;
+  color: #c242f4;
+  text-decoration: none;
+}
+
+#height-change {
+  height: 500px;
+}

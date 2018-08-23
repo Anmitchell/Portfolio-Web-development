@@ -1,0 +1,80 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class employee {
+protected:
+	string name;
+public:
+	employee();
+	employee(string);
+	string getName();
+	void setName(string);
+	void print();
+};
+employee::employee():name("not defined") {}
+
+employee::employee(string nName) : name(nName) {}
+
+string employee::getName() { return name; }
+void employee::setName(string nName) { name = nName; }
+void employee::print() {
+	cout << "Name: " << name << endl;
+}
+
+//hourly class inherits from employee class
+class hourly:public employee {
+	double rate;
+	double hours;
+public:
+	hourly();
+	hourly(string, double, double);
+	hourly(hourly&); //copy constructor
+	double getRate();
+	double getHours();
+	void setRate(double);
+	void setHours(double);
+	void print();
+};
+hourly::hourly() {
+	employee();
+	hours = 0;
+	rate = 0;
+}
+
+//copy constructor
+hourly::hourly(hourly& h) {
+	this->name = h.name;
+	this->hours = h.hours;
+	this->rate = h.rate;
+}
+
+hourly::hourly(string newName, double nRate, double nHours): employee(newName){
+	rate = nRate;
+	hours = nHours;
+}
+double hourly::getRate() { return rate; }
+double hourly::getHours() { return hours; }
+void hourly::setRate(double nRate) {
+	rate = nRate;
+}
+void hourly::setHours(double nHours) {
+	hours = nHours;
+}
+void hourly::print() {
+	cout << "name: " << name << endl;
+	cout << "hours: " << hours << endl;
+	cout << "rate: " << rate << endl;
+}
+
+int main() {
+	hourly h1, h2("daisy",10,5);
+
+	h1.print();
+	h2.print();
+
+	hourly h3(h2);
+
+	h3.print();
+
+	return 0;
+}
